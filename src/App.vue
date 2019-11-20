@@ -1,13 +1,23 @@
 <template>
   <div class="app">
-    <header></header>
-    <aside></aside>
+    <header>
+      <h1>BS</h1>
+    </header>
+    <aside>
+      <div><input type="radio" name="size"> <label for="">&lt; 6 liters</label></div>
+      <div><input type="radio" name="size"> <label for="">8 liters</label></div>
+      <div><input type="radio" name="size"> <label for="">10 liters</label></div>
+      <div><input type="radio" name="size"> <label for="">12 liters</label></div>
+    </aside>
     <main>
+      <input type="text" placeholder="Search a product">
       <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laborum impedit omnis placeat culpa corporis. Eius rem ipsa ipsum deleniti optio fugiat iure voluptatem earum adipisci eligendi atque, neque animi.</div>
       <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laborum impedit omnis placeat culpa corporis. Eius rem ipsa ipsum deleniti optio fugiat iure voluptatem earum adipisci eligendi atque, neque animi.</div>
       <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laborum impedit omnis placeat culpa corporis. Eius rem ipsa ipsum deleniti optio fugiat iure voluptatem earum adipisci eligendi atque, neque animi.</div>
     </main>
-    <footer></footer>
+    <footer>
+      I'm footer
+    </footer>
   </div>
 </template>
 
@@ -24,7 +34,6 @@ body {
 }
 
 .app {
-  min-height: 100vh;
   display: grid;
   grid-template-columns: 250px auto;
   grid-template-rows: repeat(3, auto);
@@ -37,22 +46,42 @@ body {
 header {
   min-height: 50px;
   grid-area: header;
-  background: #ccc;
+  background: #eee;
+  padding: 10px;
+}
+
+header h1 {
+  line-height: 1;
+  margin: 0;
+  margin-top: 10px;
 }
 
 aside {
   grid-area: facets;
-  background: tan;
+  background: #eee;
+  padding: 20px;
 }
 
 main {
   grid-area: main;
   background: white;
+  padding: 20px;
+  padding-top: 0;
+}
+
+main input {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
 }
 
 footer {
   min-height: 50px;
   grid-area: footer;
-  background: #ccc;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
