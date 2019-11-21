@@ -24,6 +24,21 @@
 <script>
 export default {
   name: 'app',
+  data() {
+    return {
+      url: null,
+      core: null,
+      documents: [],
+      facets: [],
+      query: '',
+      loading: false,
+    }
+  },
+  methods: {
+    fetchFacets() {},
+    fetchDocuments() {},
+    queryDocuments() {},
+  }
 }
 </script>
 
@@ -48,6 +63,7 @@ header {
   grid-area: header;
   background: #eee;
   padding: 10px;
+  margin-bottom: 20px;
 }
 
 header h1 {
@@ -58,11 +74,12 @@ header h1 {
 
 aside {
   grid-area: facets;
-  background: #eee;
   padding: 20px;
+  border-right: 1px solid #ddd;
 }
 
 main {
+  min-height: calc(100vh - 215px);
   grid-area: main;
   background: white;
   padding: 20px;
@@ -83,5 +100,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 </style>
