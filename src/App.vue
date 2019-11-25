@@ -22,6 +22,8 @@
 </template>
 
 <script>
+import Solr from 'solr-admin-client';
+
 export default {
   name: 'app',
   data() {
@@ -37,7 +39,10 @@ export default {
   methods: {
     fetchFacets() {},
     fetchDocuments() {},
-    queryDocuments() {},
+    async queryDocuments() {
+      const solr = new Solr(this.url, this.core);
+      await solr.query(this.query);
+    },
   }
 }
 </script>

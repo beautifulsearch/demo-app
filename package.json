@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.3.2",
+    "solr-admin-client": "git+https://github.com/beautifulsearch/solr-admin-client.git",
     "vue": "^2.6.10",
     "vuex": "^3.0.1"
   },
